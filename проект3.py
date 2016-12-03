@@ -93,15 +93,17 @@ for news in newsarray:
     else:
         continue          
 set_final = set1 & set0 & set2
-set_diff1 = set0^set1
-set_diff2 = set1^set2
-set_diff3 = set2^set0
-set_diff = set_diff1|set_diff2|set_diff3
+set_diff1 = set0&set1
+set_diff2 = set1&set2
+set_diff3 = set2&set0
+set_diff = set1|set2|set0 - set_diff1 - set_diff2 - set_diff3
 
-set_dif_rare1 = set_rare0^set_rare1
-set_dif_rare2 = set_rare1^set_rare2
-set_dif_rare3 = set_rare2^set_rare0
-set_dif_rare = set_dif_rare1|set_dif_rare2|set_dif_rare3
+set_dif_rare1 = set_rare0&set_rare1
+set_dif_rare2 = set_rare1&set_rare2
+set_dif_rare3 = set_rare2&set_rare0
+set_dif_rare = (set_rare1|set_rare2|set_rare0) - set_dif_rare1 - set_dif_rare2 - set_dif_rare3
+
+
 for element in set_final:
     common.append(element)
 for element in set_diff:
@@ -112,4 +114,4 @@ for element in set_dif_rare:
 
 writing('Слова, встречающиеся во всех новостных статьях по теме:' +'\n'+ '\n'.join(common) \
         + '\n'+ '\n' + 'Слова, не повторяющиеся более чем в одной статье:'+'\n'+ '\n'.join(difference) + '\n' + '\n'+ \
-        'Слова, не повторяющиеся более чем в одной статье, с частотностью >=1:' + '\n'+ '\n'.join(difference_rare))
+        'Слова, не повторяющиеся более чем в одной статье, с частотностью >1:' + '\n'+ '\n'.join(difference_rare))
