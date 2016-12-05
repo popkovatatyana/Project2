@@ -90,18 +90,27 @@ for news in newsarray:
     elif news == newsarray[2]:
         set2 = sets(array)
         set_rare2 = sets(frequency(array))
+    elif news == newsarray[3]:
+        set3 = sets(array)
+        set_rare3 = sets(frequency(array))   
     else:
         continue          
-set_final = set1 & set0 & set2
+set_final = set1 & set0 & set2 &set3 
 set_diff1 = set0&set1
 set_diff2 = set1&set2
 set_diff3 = set2&set0
-set_diff = set1|set2|set0 - set_diff1 - set_diff2 - set_diff3
+set_diff4 = set0&set3
+set_diff5 = set1&set3
+set_diff6 = set2&set3
+set_diff = (set1|set2|set0|set3) - set_diff1 - set_diff2 - set_diff3- set_diff4- set_diff5- set_diff6
 
 set_dif_rare1 = set_rare0&set_rare1
 set_dif_rare2 = set_rare1&set_rare2
 set_dif_rare3 = set_rare2&set_rare0
-set_dif_rare = (set_rare1|set_rare2|set_rare0) - set_dif_rare1 - set_dif_rare2 - set_dif_rare3
+set_dif_rare4 = set_rare0&set_rare3
+set_dif_rare5 = set_rare1&set_rare3
+set_dif_rare6 = set_rare2&set_rare3
+set_dif_rare = (set_rare1|set_rare2|set_rare0|set_rare3) - set_dif_rare1 - set_dif_rare2 - set_dif_rare3- set_dif_rare4- set_dif_rare5- set_dif_rare6
 
 
 for element in set_final:
