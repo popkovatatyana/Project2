@@ -2,6 +2,8 @@ from pymorphy2 import MorphAnalyzer
 import numpy as np
 import json,telebot, conf, flask, re
 
+# имя бота в телеграмм: @voina_i_mir_bot 
+
 WEBHOOK_URL_BASE = "https://{}:{}".format(conf.WEBHOOK_HOST, conf.WEBHOOK_PORT)
 WEBHOOK_URL_PATH = "/{}/".format(conf.TOKEN)
 
