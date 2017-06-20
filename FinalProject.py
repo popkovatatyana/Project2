@@ -85,6 +85,8 @@ def answer(message):
     bot.send_message(message.chat.id, 'Ответ записан! Еще опрос /play ')
 
 @bot.message_handler(commands=['result'])
+#в этом же репозитории лежит созданный html файл "answers" со вставками Java-Script, показывающими круговые диаграммы полученных результатов. 
+#Pythonanywhere выдавал мне ошибки при render_template, поэтому просто выкладываю посмотреть, чтобы мой труд не пропал даром. 
 def result(message):
     total_string = ''
     result = json.loads(opening('/home/milano/mysite/answers.txt'))
