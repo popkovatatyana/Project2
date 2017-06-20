@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/static/mystyle.css" />
+  <title>Результаты опросов</title>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['как в слове «речка»',    {{af}}],
+     ['как в названии ноты «ре»', {{bf}}],
+     ['не знаю, никогда не произношу и не слышу этого слова',   {{cf}}],
+     ['зависит от значения (поясню в комментарии)', {{df}}]
+    ]);
+	var options = {
+     title: 'Как вы произносите Р в слове «френч»? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table1'));
+     chart.draw(data, options);
+   }
+  </script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+    google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['Доброе утро!',    {{a1f}}],
+     ['С добрым утром!', {{b1f}}],
+     ['и так, и так',   {{c1f}}],
+    ]);
+	var options = {
+     title: 'Как вы говорите? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table2'));
+     chart.draw(data, options);
+   }
+  </script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['Знаю в значении "объективная оценка" и знаю источник этого выражения',    {{a2f}}],
+     ['Знаю в значении "раздельная оплата в ресторане"', {{b2f}}],
+     ['Знаю в обоих значениях и знаю источник',   {{c2f}}]
+	 ['Знаю в значении "объективная оценка", но не знаю источник этого выражения',   {{d2f}}]
+	 ['Знаю в обоих значениях, но не знаю источник',   {{e2f}}]
+	 ['Не знаю этого выражения',   {{f2f}}]
+	 ['Другое (напишу комментарий)',   {{g2f}}]
+    ]);
+	var options = {
+     title: 'Знаете ли вы выражение "гамбургский счет" и его источник? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table3'));
+     chart.draw(data, options);
+   }
+  </script
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['инфа́',    {{a3f}}],
+     ['и́нфа', {{b3f}}]
+    ]);
+	var options = {
+     title: 'Как бы вы сказали? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table4'));
+     chart.draw(data, options);
+   }
+  </script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['Доброе утро!', {{a4f}}],
+     ['С добрым утром!', {{b4f}}],
+	 ['и так, и так', {{c4f}}]
+    ]);
+	var options = {
+     title: 'Как вы говорите? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table5'));
+     chart.draw(data, options);
+   }
+  </script>
+  </script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['чехол', {{a5f}}],
+     ['платье', {{b5f}}],
+	 ['прическа', {{c5f
+	 ['резьба по дереву', {{d5f}}],
+     ['юбка', {{e5f}}],
+	 ['другое (напишу комментарий)', {{f5f
+	 ['резьба по дереву', {{g5f}}],
+     ['знаю больше одного значения (напишу комментарий!)', {{h5f}}],
+	 ['не знаю ни одного значения', {{i5f}}]
+    ]);
+	var options = {
+     title: 'Что для вас значит слово "татьянка"? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table6'));
+     chart.draw(data, options);
+   }
+  </script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['знаю', {{a6f}}],
+     ['не знаю', {{b6f}}],
+	
+    ]);
+	var options = {
+     title: 'Знаете ли вы игру «сокс»? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table7'));
+     chart.draw(data, options);
+   }
+  </script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['впервые вижу и не понимаю, что оно значит', {{a7f}}],
+     ['впервые вижу, но могу понять, что оно значит', {{b7f}}],
+	 ['слово встречалось, но не знаю, что оно значит', {{c7f}}],
+	 ['слово встречалось, примерно представляю, что оно значит', {{d7f}}]
+	 ['знаю слово и точно знаю, что оно значит', {{e7f}}]
+    ]);
+	var options = {
+     title: 'Знаете ли вы слово «перочистка»? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table8'));
+     chart.draw(data, options);
+   }
+  </script>
+  </script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Вопрос', 'Процент ответивших'],
+     ['знаю', {{a8f}}],
+     ['не знаю', {{b8f}}],
+    ]);
+	var options = {
+     title: 'Знаете ли вы игру «штандер»? (открытое голосование)',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('table9'));
+     chart.draw(data, options);
+   }
+  </script>
+  </head>
+ <div id = "head">
+<img src="{{url_for('static', filename='head.jpg')}}" />
+</div>
+ 
+ <body>
+ <div id="content">
+ <h1>Результаты опрсов Бориса Иомдина</h1>
+  <div id="table1" style="width: 700px; height: 600px;"></div>
+  <div id="table2" style="width: 700px; height: 600px;"></div>
+  <div id="table3" style="width: 700px; height: 600px;"></div>
+  <div id="table4" style="width: 700px; height: 600px;"></div>
+  <div id="table5" style="width: 700px; height: 600px;"></div>
+  <div id="table6" style="width: 700px; height: 600px;"></div>
+  <div id="table7" style="width: 700px; height: 600px;"></div>
+  <div id="table8" style="width: 700px; height: 600px;"></div>
+  <div id="table9" style="width: 700px; height: 600px;"></div>
+  </div>
+
+ </body>
+</html>
+
+<script>
+ 
+  
